@@ -1,0 +1,9 @@
+# time complexity O(n)
+# space - 1
+def MaxSubarraySum (array):
+	final_max_sum = array[0]
+	max_sum = array[0]
+	for num in array[i:] :
+		max_sum = max(max_sum + num, num )
+		final_max_sum = max (final_max_sum, max_sum)
+	return final_max_sum
