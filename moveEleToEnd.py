@@ -1,5 +1,5 @@
 #time-O(N) 
-#space - O(N)
+#space - O(1)
 
 def moveEleToEnd(array, ele):
 	i = 0
