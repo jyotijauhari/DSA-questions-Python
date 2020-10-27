@@ -8,7 +8,7 @@ def CaesarCipherEncrypter(string, key):
 
 def getNewLetter(letter, key):
 	newLetterCode = ord(letter) + key #ord returns ascii(unicode) of letter
-	return alphabet[newLetterCode] if newLetterCode <= 26 else return alphabet[26 + newLetterCode%2]
+	return chr [newLetterCode] if newLetterCode <= 122 else return chr [96 + (newLetterCode % 122)]
 
 #input 
 #string = abc
