@@ -2,6 +2,8 @@
 #input: [go,act,flop,tac, cat,og,lofp]
 #output: [[go,og],[act,cat,tac][flop,lofp]]
 
+#O(wn) - w is no of words and n is length of longest words
+# time - O(wnlogn) - nlogn sorting , for w words wnlogn
 def groupAnagram(words):
 	anagram = {}
 	for word in words:
