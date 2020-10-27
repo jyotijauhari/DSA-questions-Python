@@ -1,5 +1,6 @@
 
 #O(b+s) time | O(b+s) space
+#        b - big string lenth , s small substring
 def get smallestSubstringContaining(bigString, smallString):
 	targetCharCounts = getCharCounts(smallstring)
 	substringBounds = getSubstringBounds(bigString, targetCharCounts)
