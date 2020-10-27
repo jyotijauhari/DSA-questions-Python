@@ -10,7 +10,7 @@ def subarraySortBound(array):
 		if OutofBound(i, num, array):
 			minOutofOrder = min(minOutofOrder, num)
 			maxOutofOrder = max(maxOutofOrder, num)
-	if minOutofBound == float("inf"):
+	if minOutofOrder == float("inf"):
 		return[-1,-1]
 	subarrayLeftIdx = 0
 	while minOutofOrder >= array[subarrayLeftIdx]:
