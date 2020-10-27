@@ -4,7 +4,7 @@ def ValidateSubsquence(array, subseq):
 	m = len(array)
 	n = len(subseq)
 	counter =0
-	for i in array:
+	for i in range(len(array)):
 		current = array[i]
 		if current == subseq[counter] :
 			counter++
