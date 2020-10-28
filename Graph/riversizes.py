@@ -1,3 +1,5 @@
+# time nd space = O(m*n) , m = row, n = col
+
 #river sizes
 '''
 input:
