@@ -1,3 +1,5 @@
+#push(), pop(), isEmpty() and top() all take O(1) time.
+
 class CustomStack:
     def __init__(self):
         self.__data = list() #local var

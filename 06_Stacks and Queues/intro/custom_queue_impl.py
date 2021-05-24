@@ -1,4 +1,5 @@
 #(insert - enqueue, delete - dequeue)
+# inserting or deleting an element at the beginning requires shifting all of the other elements by one, requiring O(n) time.
 
 # insertion efficient queue (prob - removal take O(n) time and to removal n item n2 time
 

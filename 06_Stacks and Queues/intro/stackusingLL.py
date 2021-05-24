@@ -1,3 +1,5 @@
+# time complexity - 1, space complexity - 1
+
 class Node:
     def __init__(self,data):
         self.data = data

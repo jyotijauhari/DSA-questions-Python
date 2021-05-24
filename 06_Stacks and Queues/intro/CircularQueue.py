@@ -1,31 +1,60 @@
-class CircularQueue:
-    def __init__(self):
-        self.__data = list()
-        self.__front = 0
-        self.__end = -1
-        self.__size = 0
+#TIME - O(1), SPACE - O(1) for all operations
+class MyQueue:
 
-    def insert(self, ele):
-        if self.__size == len(self.__data):
-            old = self.__data
-            self.__data = 2*(len(old))
-            for i in range(len(old)+1):
-                self.__data[i] = old[(self.__front+i)%len(old)] #**
-                self.__front = 0
-                self.__end = len(old) - 1
+    def __init__(self, c):
+        self.l = [None] * c
+        self.cap = c
+        self.size = 0
+        self.front = 0
 
-        self.__end = ( self.__end +1 ) % len(self.__data)
-        self.__data[self.__end] = ele
-        self.__size += 1
-
-    def delete(self):
-        if self.__size == 0:
+    def getFront(self):
+        if self.size == 0:
             return None
-        value = self.__data[self.__front]
-        self.__front = (self.__front + 1)%len(self.__data)
-        self.__size -= 1
-        return value
+        else:
 
-queue = CircularQueue()
-queue.insert()
+            return self.l[self.front]
 
+    def getRear(self):
+        if self.size == 0:
+            return None
+        else:
+            rear = (self.front + self.size - 1) % self.cap
+            return self.l[rear]
+
+    def enque(self, x):
+        if self.size == self.cap:
+            return
+        else:
+            rear = (self.front + self.size - 1) % self.cap
+            rear = (rear + 1) % self.cap
+            self.l[rear] = x
+
+            self.size = self.size + 1
+
+    def deque(self):
+        if self.size == 0:
+            return None
+        else:
+            res = self.l[self.front]
+            self.front = (self.front + 1) % self.cap
+            self.size = self.size - 1
+
+            return res
+
+
+# main
+q = MyQueue(4)
+q.enque(10)
+print(q.getFront(), q.getRear())
+q.enque(20)
+print(q.getFront(), q.getRear())
+q.enque(30)
+print(q.getFront(), q.getRear())
+q.enque(40)
+print(q.getFront(), q.getRear())
+q.deque()
+print(q.getFront(), q.getRear())
+q.deque()
+print(q.getFront(), q.getRear())
+q.enque(50)
+print(q.getFront(), q.getRear())
