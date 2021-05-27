@@ -1,3 +1,3 @@
 # DSA-Coding-Questions
 
-DSA Coding Questions
+DSA and basic Coding Questions
