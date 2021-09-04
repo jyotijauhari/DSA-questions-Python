@@ -19,11 +19,16 @@ else
 print(*)
 
 4321
- 321
-  21
-   1
+*321
+**21
+***1
+
 i = n
-j = n-i+1
+j = 0
+if j <= i - 1
+print *
+else
+print(n-j)
 
 
 
@@ -38,6 +43,14 @@ while(i<=n):
             print(j, end=" ")
         else:
             print("*", end=" ")
+        j += 1
+    
+    j = 1 
+    while(j<=n):
+        if (j<= i - 1):
+            print("*", end=" ")
+        else:
+            print(n-j+1, end=" ")
         j += 1
     print()
     i += 1
