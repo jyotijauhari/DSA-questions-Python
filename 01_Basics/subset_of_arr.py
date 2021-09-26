@@ -15,3 +15,24 @@ for i in range(size):
             subset.append(s[j])
     ans.append(subset)
 print(ans)
+
+# using recursion
+def subseq(nums, ans, curr, index):
+    if index > len(nums):
+        return
+    ans.append(curr[:])
+    for i in range(index, len(nums)):
+        if nums[i] not in curr:
+            curr.append(nums[i])
+            subseq(nums, ans, curr, i)
+            curr.pop()
+    return
+        
+
+
+nums = [1,2,3]
+ans = []
+curr = []
+index = 0
+subseq(nums, ans, curr, index)
+print(ans)
