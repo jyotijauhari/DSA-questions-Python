@@ -241,6 +241,29 @@ Ans: (3,5), (1,7), (2,6), (9,-1)
 
 '''
 
+arr = [3, 1, 11, 2, 9, 7, 4, 5, -1, 13, 6]
+ans = []
+target = 8 
+
+l = 0
+r = len(arr) - 1
+arr.sort()
+while l < r:
+    summ = arr[l] + arr[r]
+    if summ < target:
+        l += 1 
+    elif summ > target:
+        r -= 1 
+    else:
+        a = []
+        a.append(arr[l])
+        a.append(arr[r])
+        l += 1 
+        r -= 1 
+        ans.append(a)
+print(ans)
+
+
 '''
 15.Write a program to input an array and a target value, a number. Write a function
 which prints all triplets of numbers which sum equals to the target.
