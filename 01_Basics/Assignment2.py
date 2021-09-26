@@ -169,9 +169,6 @@ Ans: 6
 '''
 10. Write a function to check if an array is sorted or not.
 '''
-
-#can use aany corting algo
-
 # def check_sorted_array(array):
 #     for i in range(0,len(array)):
 #         for j in range(i,len(array)):
