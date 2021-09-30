@@ -10,8 +10,8 @@ def smallestDifference(arrayOne, arrayTwo):
 	idx1 = 0
 	idx2 = 0
 	while (idx1 < len(arrayOne) and idx2 <len(arrayTwo)):
-		firstNum = arrayOne(idx1)
-		secondNum = arrayTwo(idx2)
+		firstNum = arrayOne[idx1]
+		secondNum = arrayTwo[idx2]
 		if(firstNum < secondNum):
 			currrent = secondNum - firstNum
 			idx1 += 1
