@@ -1,16 +1,14 @@
-class newNode:
+class BinaryTreeNode:
     def __init__(self, data):
         self.data = data
-        self.left = self.right = None
- 
+        self.left = None
+        self.right = None
+
 # Function to insert nodes in level order
 def insertLevelOrder(arr, root, i, n):
     # Base case for recursion
     if i < n:
-        if arr[i] == -1:
-            return None
-            
-        temp = newNode(arr[i])
+        temp = BinaryTreeNode(arr[i])
         root = temp
         # insert left child
         root.left = insertLevelOrder(arr, root.left, 2 * i + 1, n)
@@ -26,10 +24,19 @@ def inOrder(root):
         print(root.data,end=" ")
         inOrder(root.right)
 
-# Driver Code
+def replaceWithDepth(root,level=0):
+    if root == None:
+        return 
+    if root.data is not None:
+        root.data = level
+    replaceWithDepth(root.left, level + 1)
+    replaceWithDepth(root.right, level + 1)
+
+
 if __name__ == '__main__':
-    arr = [2,1,3,-1,4,5,-1]
+    arr = [1, 2, 3, 4, 5, 6, 7]
     n = len(arr)
     root = None
     root = insertLevelOrder(arr, root, 0, n)
+    replaceWithDepth(root)
     inOrder(root)

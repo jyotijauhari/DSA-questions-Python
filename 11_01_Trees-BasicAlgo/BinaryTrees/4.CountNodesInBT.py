@@ -12,9 +12,6 @@ def treeSize(root):
         return 1 + treeSize(root.left) + treeSize(root.right)
 
 
-
-
-
 # Driver Code
 
 root = Node(7)
