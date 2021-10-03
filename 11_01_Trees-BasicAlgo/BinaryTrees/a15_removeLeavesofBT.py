@@ -3,7 +3,7 @@ def removeLeaves(root):
         return None
     if root.left == None and root.right == None:
         return None
-    root.left = removeLeaves1(root.left)       
-    root.right = removeLeaves1(root.right)
+    root.left = removeLeaves(root.left)       
+    root.right = removeLeaves(root.right)
     
     return root
