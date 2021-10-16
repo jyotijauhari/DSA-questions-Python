@@ -1,4 +1,6 @@
-# for connected graph
+# for connected graph 
+# tc and sc - 0(V+E)
+
 from collections import deque
 
 def addEdge(adj, u, v):
@@ -40,7 +42,7 @@ s=0 # starting
 print('\nBFS path')
 BFS(adj,s)
 
-
+# tc and sc - 0(V+E)
 # for disconnected graph
 
 '''
