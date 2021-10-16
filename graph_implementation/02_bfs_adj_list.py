@@ -1,3 +1,4 @@
+# for connected graph
 from collections import deque
 
 def addEdge(adj, u, v):
@@ -38,3 +39,17 @@ s=0 # starting
 
 print('\nBFS path')
 BFS(adj,s)
+
+
+# for disconnected graph
+
+'''
+def BFSDis(adj):
+    visited = [False] * len(adj)
+
+    for u in range(len(adj)):
+        if visited[u] == False:
+            BFS(adj, u, visited)
+
+BFSDis(adj)
+'''
