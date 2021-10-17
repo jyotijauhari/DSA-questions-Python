@@ -23,3 +23,25 @@ def backtrackAncestralTree( lowerDescendant, higherDescendant, diff):
 		loweDescendant = lowerDescendant.ancestor
 		higherDescendant = higherDescendant.ancestor
 	return lowerDescendant
+
+#other method require space
+#https://www.youtube.com/watch?v=13m9ZCB8gjw
+class AncestralTree:
+    def __init__(self, name):
+        self.name = name
+        self.ancestor = None
+
+# O(D) time and space
+def getYoungestCommonAncestor(topAncestor, descendantOne, descendantTwo):
+    # Write your code here.
+    visited = set()
+	while descendantOne != topAncestor:
+		visited.add(descendantOne)
+		descendantOne = descendantOne.ancestor
+		
+	while descendantTwo != topAncestor:
+		if descendantTwo in visited:
+			return descendantTwo
+		descendantTwo = descendantTwo.ancestor
+		
+	return topAncestor
